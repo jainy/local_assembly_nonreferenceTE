@@ -29,7 +29,7 @@ my $changelog = "
 \n";
 
 my $usage = "\nUsage [$version]: 
-    perl $scriptname -t <table> -f <file with ltr cordinates> -l <location of bamfiles>[-p <path of the outputdirectory>][-te <te sequences>][-v] [-c] [-h] [s] 
+    perl $scriptname -t <table> -f <file with cordinates> -l <location of bamfiles>[-p <path of the outputdirectory>][-te <te sequences>][-v] [-c] [-h] [s] 
 	
 	
 	
