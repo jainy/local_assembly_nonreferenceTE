@@ -3,7 +3,7 @@ This script extracts mapped reads including mates of the discordant from a windo
 
 Usage:
 
-    perl $scriptname -t <table> -f <file with ltr cordinates> -l <location of bamfiles> -sq <path> -pc <path> -cp <cap3> [-p <path of the outputdirectory>][-te <te sequences> -bp <blast>][-v] [-c] [-h] [s] 
+    perl $scriptname -t <table> -f <file with TE breakpoints> -l <location of bamfiles> -sq <path> -pc <path> -cp <cap3> [-p <path of the outputdirectory>][-te <te sequences> -bp <blast>][-v] [-c] [-h] [s] 
 	
 	
 	
