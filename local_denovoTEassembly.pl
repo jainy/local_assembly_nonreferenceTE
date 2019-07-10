@@ -233,17 +233,17 @@ open ($fh, "<", $file) or confess "\n ERROR (main): could not open to read $file
 			$allreadrenamedfile= "$path/Assembly/allreads/Renamedcontigs/$uniqueid.rename.fasta";
 			print STDERR "performing BLAST with contigs on TEs......\n";
 			my $contigTEblastout = "$path/contigTEblast/$tetype/$uniqueid.rename.te.blast.out";
-			unless (-e "$allreadrenamedfile.nhr") {
-				system ("$BLASTpro/makeblastdb -in $allreadrenamedfile -dbtype nucl") == 0 or die ("unable to makeblastdb on $allreadrenamedfile \n");
+			unless (-e "$teseq.nhr") {
+				system ("$BLASTpro/makeblastdb -in $teseq -dbtype nucl") == 0 or die ("unable to makeblastdb on $teseq \n");
 			}
 			#system ("$BLASTpro/blastn -db $teseq -query $allreadrenamedfile -evalue 0.0001 -out $contigTEblastout") == 0 or die ("unable to to perform blast $uniqueid \n");
-			system ("$BLASTpro/blastn -db $allreadrenamedfile -query $teseq -evalue 0.001 -outfmt 6 -out $contigTEblastout.tabular.out") == 0 or die ("unable to to perform tabular blast $uniqueid \n");#fortableoutput
+			system ("$BLASTpro/blastn -db $teseq -query $allreadrenamedfile -evalue 0.001 -outfmt 6 -out $contigTEblastout.tabular.out") == 0 or die ("unable to to perform tabular blast $uniqueid \n");#fortableoutput
 			$disrenamedfile = "$path/Assembly/disreadmatesonly/Renamedcontigs/$uniqueid.rename.fasta";
 			if (-e $disrenamedfile) {
 				unless (-z $disrenamedfile) {
 					make_path  ("$path/DisreadsTEblast/$tetype");
-					unless (-e "$disrenamedfile.nhr") {
-						system ("$BLASTpro/makeblastdb -in $disrenamedfile -dbtype nucl") == 0 or die ("unable to makeblastdb on $disrenamedfile \n");
+					unless (-e "$teseq.nhr") {
+						system ("$BLASTpro/makeblastdb -in $teseq -dbtype nucl") == 0 or die ("unable to makeblastdb on $teseq \n");
 					}
 					print STDERR "performing BLAST with disreads on TEs......\n";
 					my $disTEblastout = "$path/DisreadsTEblast/$tetype/$uniqueid.disreads.te.blast.out";
