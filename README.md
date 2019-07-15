@@ -30,4 +30,4 @@ Usage:
     -s,--verbose(BOOL)   The script will talk to you
     -h,--help>  (BOOL)   Print this usage\n\n";
     
-     
+ Please contact jainythomas1@gmail.com or jainyt@genetics.utah.edu for questions or support.
