@@ -34,14 +34,15 @@ my $usage = "\nUsage [$version]:
 	
 	
     MANDATORY ARGUMENT:	
-    -t,--table (STRING) file contain accession information first column needs to be the IDs, second column BAMIDs
-    -f,--file  (STRING) file containing accession information 
+    -t,--table (STRING) file contain accession information first column needs to be the IDs, second column BAMIDs e.g (8463 8463.bam) 
+    -f,--file  (STRING) file containing the break point information separted by tab (sampleID,chr,genomic location,expected TE(optional))  (e.g.8463    4       140408656 Alu) 
     -l,--bamloc(STRING)	location of bam files
     -sq,--seqtk(STRING)  path to seqtk
     -pc,--picard(STRING) path to picard tools
     -cp,--cap3  (STRING) path to cap3
     -bp,--blast (STRING) path to blast	
-    	  
+    
+    samtools has to be installed (http://www.htslib.org/) and has to be in the path	  
     OPTIONAL ARGUMENTS:
     -p,--path   (STRING) output directory name (path)
                          Default = <current working directory>
