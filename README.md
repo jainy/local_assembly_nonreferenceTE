@@ -1,6 +1,8 @@
 # local_assembly_nonreferenceTE
 This script extracts mapped reads including mates of the discordant from a window of 500bp from a given breakpoint and performs a local assembly of the reads. 
 
+Additional options: If TE sequences and path to blast are provided,the mates of the discordant reads are blasted against the provided TE sequence.
+
 Usage:
 
     perl $scriptname -t <table> -f <file with TE breakpoints> -l <location of bamfiles> -sq <path> -pc <path> -cp <cap3> [-p <path of the outputdirectory>][-te <te sequences> -bp <blast>][-v] [-c] [-h] [s] 
