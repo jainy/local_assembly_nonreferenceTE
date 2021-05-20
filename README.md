@@ -32,7 +32,7 @@ Usage:
  
  
  
-Using parallel to speed up the script
+Total run time of the above script depends on the number bams, as the number of bams to analyse increases the run also increases. If you are dealing multiple bam files please follow the steps described below to speed up the process.
 
 Step 1:
  The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl'. Please type 'perl scriptname -h' to see the usage of the script.
