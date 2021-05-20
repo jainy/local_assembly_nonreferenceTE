@@ -35,13 +35,13 @@ Usage:
 Using parallel to speed up the script
 
 Step 1:
- The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl' (provided in the util folder). Please type 'perl scriptname -h' to see the usage of the script.
+ The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl'. Please type 'perl scriptname -h' to see the usage of the script.
 A folder called 'splitbyindividuals' is created containing the splitfiles based on the number of individuals requested for split.
 
 	perl splitfile_for_parallel_individuals.pl -f <file that needs to split i.e file with TE breakpoints> -s yes -n <number in individuals>
 
 Step 2:
-Using 'parallel' (https://www.gnu.org/software/parallel/parallel_tutorial.html) multiple jobs are launched. Then do 'cd splitbyindividuals' and then launch the script(example commandline below). Max no of jobs submitted for the parellel (-j) = total number of individuals/number of individuals given with -n option in step 1)
+Then do 'cd splitbyindividuals' and then launch multiple jobs using 'parallel' (https://www.gnu.org/software/parallel/parallel_tutorial.html) .(see example commandline below). Max no of jobs submitted for the parellel (-j) depends on the total number of individuals/number of individuals given with -n option in step 1.
 
 	 cat ../listof_files.txt | nohup /usr/bin/parallel -j X --results path_of_directory_forstderr 'perl $scriptname -t <table> -f <file with TE breakpoints> -l <location of bamfiles> -sq <path> -pc <path> -cp <cap3> [-p <path of the outputdirectory>][-te <te sequences> -bp <blast>]' &
 
