@@ -29,5 +29,14 @@ Usage:
     -v,--v      (BOOL)   Print version if only option
     -s,--verbose(BOOL)   The script will talk to you
     -h,--help>  (BOOL)   Print this usage\n\n";
-    
+ 
+ 
+ 
+VI. Using parallel to speed up the script
+
+The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl' (provided in the util folder). Please type 'perl scriptname -h' to see the usage of the script.
+
+
+
+
  Please contact jainythomas1@gmail.com or jainyt@genetics.utah.edu for questions or support.
