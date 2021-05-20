@@ -32,9 +32,16 @@ Usage:
  
  
  
-VI. Using parallel to speed up the script
+Using parallel to speed up the script
 
-The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl' (provided in the util folder). Please type 'perl scriptname -h' to see the usage of the script.
+Step 1:
+ The  --file (the file containing coordinates and individual)  is split to multiple files using the script called 'splitfile_for_parallel_individuals.pl' (provided in the util folder). Please type 'perl scriptname -h' to see the usage of the script.
+A folder called splitbyindividuals is created containing the splitfiles based on the number of individuals requested for split
+
+Step 2:
+Using 'parallel' (https://www.gnu.org/software/parallel/parallel_tutorial.html) multiple jobs are launched. cd splitbyindividuals and then launch the script(example commandline below).
+	 cat ../listof_files.txt | nohup /usr/bin/parallel -j 10 --results path_of_directory_forstderr 'perl $scriptname -t <table> -f <file with TE breakpoints> -l <location of bamfiles> -sq <path> -pc <path> -cp <cap3> [-p <path of the outputdirectory>][-te <te sequences> -bp <blast>][-v] [-c] [-h] [s]' &
+
 
 
 
