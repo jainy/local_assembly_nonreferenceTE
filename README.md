@@ -49,4 +49,4 @@ Then do 'cd splitbyindividuals' and then launch multiple jobs using 'parallel' (
 
 
 
- Please contact jainythomas1@gmail.com or jainyt@genetics.utah.edu for questions or support.
+ Please contact jainythomas1@gmail.com for questions or support.
